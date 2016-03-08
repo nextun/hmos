@@ -42,7 +42,7 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <?php echo form_open(); ?>
+                        <form role="form" action="<?=site_url('/login/check');?>" method="post">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Username" name="username" type="text" autofocus>
@@ -69,7 +69,7 @@
                                 <!-- Change this to a button or input when using this as a form -->
                                 <input type="submit" class="btn btn-lg btn-success btn-block" value="Login">
                             </fieldset>
-                        <?php echo form_close();?>
+                        </form>
                     </div>
                 </div>
             </div>
