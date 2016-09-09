@@ -1,6 +1,26 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+function __autoload($classname){
+	if(strpos($classname, 'CI_') !== 0){
+		$file = APPPATH.'libraries/'.$classname.'.php';
+		if (file_exists($file) && is_file($file)) {
+			@include_once($file);
+		}
+		/*
+		if (file_exists($file = APPPATH . 'core/' . $classname . '.php'))
+        {
+            @include_once($file);
+        }
+        elseif (file_exists($file = APPPATH . 'libraries/' . $classname . '.php'))
+        {
+            @include_once($file);
+        }else{
+
+        }*/
+
+	}
+} 
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -314,7 +334,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'etrefgeryfghtydfertrfdhg34dr5ret45';
 
 /*
 |--------------------------------------------------------------------------

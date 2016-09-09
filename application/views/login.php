@@ -42,14 +42,14 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="<?=site_url('/login/check');?>" method="post">
+                        <form role="form" action="<?=site_url('/login');?>" method="post">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Username" name="username" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                                </div> 
+                                </div>
                                     <label>User type</label>
                                     <div class="radio">
                                         <label>
@@ -65,7 +65,7 @@
                                         <label>
                                             <input type="radio" name="usertype" id="usertypeadmin" value="admin">Admin
                                         </label>
-                                    </div> 
+                                    </div>
                                 <!-- Change this to a button or input when using this as a form -->
                                 <input type="submit" class="btn btn-lg btn-success btn-block" value="Login">
                             </fieldset>
